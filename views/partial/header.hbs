@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://bootstraptema.ru/snippets/style/2015/bootswatch/bootstrap-united-v3.3.6.css"
+  media="screen">
+<class class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <div class="nav navbar-nav">
+        <li class="active"><a href="/">Вопросы <span class="sr-only">(current)</span></a></li>
+        {{forEachUser}}
+        {{ifadmin user.role}}
+        {{notAvtorisation}}
+       
+      </div>
+    </div>
+  </div>
+</class>
+
+
+    <style>
+      body {
+        padding-top: 0px;
+      }
+
+      .navbar-nav {
+        flex-direction: initial;
+        float: right;
+      }
+
+      .navbar {
+        border-radius: 0px;
+        max-height: 50px;
+        margin-bottom: 0px;
+      }
+
+      .navbar-inverse {
+        background-color: #511d39
+      }
+      .navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+    </style>

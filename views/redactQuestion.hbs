@@ -1,0 +1,56 @@
+<script defer src="/local.js"></script>
+<div class= "questions-contain">
+{{#each allQuestions}}
+<div class = "each">
+<div id="{{this.id}}" class="card" style="width: 18rem;">
+<img data-img="img" src="{{this.img}}" class="card-img-top" alt="...">
+<div class="card-body">
+  <p data-question="question" id ="card-text-question">{{this.question}}</p>
+  <form name = "formData"  method="POST"  action="/admin/{{this.id}}" id="card-text-class" type="submit" >
+  <input name="question" action="/admin/{{this.id}}" value ="{{this.question}}" ></input>
+<button action="/admin/{{this.id}}" data-close ="close" type="button" class="btn-close" aria-label="Close"></button>
+  </form>
+  <p class="card-text">{{this.unswer}}</p>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" data-delete='delete' class="btn delete btn-danger">Удалить</button>
+  <button type="button" data-change='change' class="btn change btn-warning">Изменить</button>
+  <button type="submit" data-save='save' class="btn save btn-success">Сохранить</button>
+</div>
+</div>
+</div>
+</div>
+{{/each}}
+
+</div>
+</div>
+
+<style>
+  img{
+    width: 300px;
+    height: 180px;
+    min-width: 300px;
+    min-height: 180px;
+  }
+.each{
+  width: 300px;
+  padding-top: 10px;
+}
+.card{
+      display: -webkit-inline-box;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%!important;
+}
+.card-body{
+  padding-bottom: 0px;
+}
+.btn-group{
+  padding-top: 52px
+}
+#card-text-class{
+  display:none;
+}
+#card-text-question{
+  display:block
+}
+</style>

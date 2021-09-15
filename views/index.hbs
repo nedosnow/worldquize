@@ -1,0 +1,37 @@
+<script defer src="/local.js"></script>
+
+
+{{!-- 
+
+<div> 
+  <form data-form method="POST" type="keydown">
+<div class="input-group mb-3">
+  <input type="text" name="question"  class="form-control" placeholder="Search" >
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+  <p id="log"> </p>
+</div>
+
+  </form>
+</div> --}}
+
+{{#each allQuestions}}
+<div class = "each">
+<div id ="{{this.id}}" class="card" style="width: 30rem;">
+<img class="card-img-top" src="{{this.img}}"  alt="...">
+
+</div>
+<div class="card-body">
+  <p class="card-text">{{this.question}}</p>
+  <p class="card-text">{{this.unswer}}</p>
+</div>
+</div>
+
+
+{{/each}}
+
+<style>
+
+.each{
+  padding-top: 10px;
+}
+</style>

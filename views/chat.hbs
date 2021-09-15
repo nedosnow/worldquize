@@ -1,0 +1,13 @@
+//websockers
+<div class="chat">
+  <ul>
+    {{#each allMessages}}
+    <li>
+      {{this.message}}
+    </li>
+    {{/each}}
+  </ul>
+  <form name ="message">
+    <input type="text" name="message" placeholder="write message here ...">
+  </form>
+</div>

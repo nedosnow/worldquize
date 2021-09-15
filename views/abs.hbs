@@ -1,0 +1,67 @@
+<script defer src="/index.js"></script>
+
+<div class="card">
+  <h5 class="card-header">О странах мира</h5>
+  <div class="card-body">
+  
+     
+    <form method = "PATCH" name = "formData">
+    {{#if question}}
+    <div class ="question" name='question' class="card-text">{{question.question}}</div>
+    
+    {{/if}}
+    <input name= "unswer" class="card border"></input>
+    <div class="btn-group" role="group" aria-label="Basic outlined example"></div>
+    
+    <button id='btndwn'  name="button" type = "submit" class="btn btn-outline-primary ">Твой ответ</button>
+    </form>
+  <div class = "forimg">
+    <img class = 'img' src='' >
+  </div>
+  
+    </div>
+  </div>
+</div>
+
+<style>
+  img{
+    display:none;
+    width: 300px;
+    height: 300px;
+  }
+  .card{
+    border-radius: 4px;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 20px;
+    margin-top: 6%;
+    padding-bottom: 10px;
+  }
+  .forimg{
+    padding-top: 10px;
+  }
+  .card-header{
+      align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+        padding: .9rem 3rem;
+    margin-bottom: 0;
+    background-color: rgb(81 29 57 / 7%);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+  }
+  h5{
+    margin-top: 0px;
+  }
+  .question{
+    font-size: 20px;
+    color: #511d39;
+  }
+  .border-primary{
+  border-color: #511d39;
+  }
+  .btn-outline-primary {
+  border-color: #511d39;
+  color:#511d39;
+  }
+</style>
